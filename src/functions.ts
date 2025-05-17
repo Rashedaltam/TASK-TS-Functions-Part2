@@ -7,8 +7,20 @@
  * greet("Hamza") logs "Hello Hamza"
  */
 function greet(name: string): void {
-  // Your code here
+  return console.log(`Hello ${name}`);
 }
+
+greet("Hamza")
+
+let x = greet("Rashed");
+console.log(x); 
+
+function greet2(n:string) {
+return `Hi ${n}`
+}
+let xy = greet2("abeer")
+console.log(xy)
+// console.log(greet2("abeer"))
 
 /**
  * isOdd(n):
@@ -20,10 +32,14 @@ function greet(name: string): void {
  * isOdd(10) -> false
  */
 function isOdd(n: number): boolean {
-  // Your code here
+  
+  return n % 2 !== 0; // replace false with what you see is fit
+  }
 
-  return false; // replace false with what you see is fit
-}
+ console.log(isOdd(7)); 
+ console.log(isOdd(10));  
+ console.log(isOdd(3));   
+ console.log(isOdd(4));   
 
 /**
  * oddsSmallerThan(n):
@@ -35,10 +51,12 @@ function isOdd(n: number): boolean {
  * oddsSmallerThan(15) -> 7; // the odd numbers being 1, 3, 5, 7, 9, 11, 13
  */
 function oddsSmallerThan(n: number): number {
-  // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  return Math.floor(n/2);
+; // replace -1 with what you see is fit
 }
+ console.log(oddsSmallerThan(21));  
+ console.log(oddsSmallerThan(12));   
+ console.log(oddsSmallerThan(55));  
 
 /**
  * squareOrDouble(n):
@@ -51,9 +69,14 @@ function oddsSmallerThan(n: number): number {
  * squareOrDouble(9) -> 81; // (9 ^ 2)
  */
 function squareOrDouble(n: number): number {
-  // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  if (n % 2 === 0 ) {
+    return n*n 
+  } else {
+    return n*2
+  }
 }
+  
+console.log(squareOrDouble(12));  
+console.log(squareOrDouble(11));  
 
 export { greet, isOdd, oddsSmallerThan, squareOrDouble };
